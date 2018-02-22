@@ -1,0 +1,7 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+geo_code_address:
+    path: /geo-code
+    controller: 'AppBundle\Controller\MapController::geoCodeAddressAction'

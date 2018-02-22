@@ -1,0 +1,51 @@
+<html>
+<head>
+
+ <style>
+    
+      #map {
+        height: 50%;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    /*To fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="search">
+    <form id="searchBar" action="map.html.twig.php" method="get">
+              Location: <input type="text" name="userLocation" id="placeName" placeholder="Please enter location here" value="">
+ 
+
+	<p>Marker color:</p>
+
+	<input type ="radio" id ="blue" name="color"> Blue</input> 
+	<input type ="radio" id="red" name="color"> Red</input>  
+
+	</br>
+
+	<p>Shape:</p>
+	<input type ="radio" id ="normal" name="shape"> Normal</input> 
+	<input type ="radio" id="star" name="shape"> Star</input>	
+	<br>
+	 <input type="submit" value="Go">
+	</form><br>
+
+
+	</div>
+
+
+</body>
+
+
+</html>
