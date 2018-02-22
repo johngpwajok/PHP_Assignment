@@ -28,7 +28,7 @@
     </style>
 
     <!-- js configuration-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbv9yX4ZyQtv6hG7Eh09fzBO5g6z-wnRc&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTYvCFHN3xuTfpgOH1nSaPwyBJJBWN81o&callback=initMap" async defer></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
     <script>
         var map;
