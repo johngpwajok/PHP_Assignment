@@ -57,16 +57,31 @@
              //alert('distance:' +math.round(getDistance/1000)+'km');
 
           marker.addListener('click', function() {
-            alert("Hello");
+            alert("Marker coulour changed");
             this.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
 
         });
 
-           marker2.addListener('click', function() {
-            alert("Hello");
+          marker2.addListener('click', function() {
+            alert("Marker colour changed");
             this.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
 
         });
+
+           marker.addListener('rightclick', function() {
+            alert("Marker shape changed");
+            this.setIcon('https://maps.gstatic.com/mapfiles/place_api/icons/zoo-71.png');
+        });
+
+           marker2.addListener('rightclick', function() {
+            alert("Marker shape changed");
+            this.setIcon('https://maps.gstatic.com/mapfiles/place_api/icons/zoo-71.png');
+        });
+//change the colour of the markers
+           marker.addListener('dblclick', function(){
+            this.setIcon().Color = 'green';
+           })
+
 
     }
 
@@ -80,12 +95,10 @@
 <body>
 
     <div id="map"></div><br>
-
     <div id="currentLocation">Current location: </div>
     <div id="destination">Destination: </div>
-    <div id="theDistance">Distance: </div>
-    <button id="colour" onclick="changeColour()">Change Marker Colour</button>
-    <button id="shape" onclick="changeShape()">Change Marker shape</button>
+    <div id="theDistance">Distance between location and destination is: </div>
+    <button id="colour">Change Marker Colour</button>
     <!-- Search field for location-->
     <div id="search">
         <form id="searchBar" method="POST" action="{{ path('geo_code_address') }}">
@@ -93,7 +106,8 @@
             <input type="submit" value="Search">
         </form>
     </div>
-
+        <h3>Please left-click on the markers to change their colours</h>
+    <h3>Please right-click on the colours to change their shape</h>
 
 </body>
 
